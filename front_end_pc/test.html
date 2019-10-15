@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试界面</title>
+
+    <script type="text/javascript" src="js/axios-0.18.0.min.js"></script>
+
+    <script type="text/javascript">
+
+        // 通过 axios 发起请求
+        var url = 'http://127.0.0.1:8000/test2/';
+        /**
+        axios.get(url)
+            .then(function (response) {  // 请求成功时调用
+                alert(response.data.message)
+            })
+            .catch(function (error) {    // 请求失败
+                if (error.response) {   // 返回了response
+                    alert(error.response.data.message)
+                } else {
+                    // error对象没有response的情况
+                    alert(error.message)
+                }
+            });
+        */
+         axios.get(url)
+            .then(response => {  // 请求成功时调用
+                alert(response.data.message)
+            })
+            .catch(error => {    // 请求失败
+                if (error.response) {   // 返回了response
+                    alert(error.response.data.message)
+                } else {
+                    // error对象没有response的情况
+                    alert(error.message)
+                }
+            });
+
+
+    </script>
+
+</head>
+<body>
+
+<h3>测试界面</h3>
+
+<img src="/static/image/avatar01.png">
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
